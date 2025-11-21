@@ -1,0 +1,25 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head> <title>Create a Company</title></head>
+<body>
+<h1>Add a new Company</h1>
+<form action="#" th:action="@{/companyForm}"
+      th:object="${company}" method="post">
+  <input type="hidden" th:field="*{companyNumber}"/>
+  <table>
+    <tr>		<td>Name:</td>
+      <td><input type="text" th:field="*{name}" /></td> </tr>
+    <tr>		<td>Street:</td>
+      <td><input type="text" th:field="*{street}" /></td> </tr>
+    <tr>		<td>Number:</td>
+      <td> <input type="text" th:field="*{number}" /></td> </tr>
+    <tr>		<td>Zip Code: </td>
+      <td> <input type="text" th:field="*{zipCode}" /></td> </tr>
+    <tr>		<td>Town:</td>
+      <td> <input type="text" th:field="*{town}" /></td> </tr>
+    <tr>		<td>Country:</td>
+      <td> <input type="text" th:field="*{country}" /></td>	 </tr>
+  </table>
+  <input type="submit" value="Add Company"/>
+</form>
+</body>
+</html>

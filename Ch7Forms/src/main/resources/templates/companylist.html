@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <h1>List of Companies</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Town</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="comp : ${comps}">
+            <td th:text="${comp.name}"></td>
+            <td th:text="${comp.town}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
